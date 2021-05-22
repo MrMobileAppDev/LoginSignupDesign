@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { View, StyleSheet, Animated, Text } from 'react-native'
 import Colors from '../config/Colors'
 import CommonTextInput from './CommonTextInput'
-const LoginChild = ({navigation}) => {
+const LoginChild = (props) => {
     const [animatedValue, setAnimatedValue] = useState(new Animated.Value(600))
     useEffect(() => {
         Animated.spring(
@@ -25,7 +25,7 @@ const LoginChild = ({navigation}) => {
             ]
         }
         ]}>
-            <CommonTextInput navigation={navigation}/>
+            <CommonTextInput navigation={props.navigation} onLogin={props.onLogin}/>
         </Animated.View>
     )
 }

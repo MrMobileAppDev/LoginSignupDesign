@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { View, StyleSheet, Text, TextInput } from 'react-native'
+import { View, StyleSheet, Text, TextInput, ActivityIndicator } from 'react-native'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import Feather from 'react-native-vector-icons/Feather'
 import { TouchableOpacity } from 'react-native-gesture-handler'
@@ -14,6 +14,9 @@ const CommonTextInput = (props) => {
     const onTextChange = (value) => {
         let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/
         setEmailValid(reg.test(value) ? true : false)
+    }
+    const loginPress = ()=>{
+        props.onLogin()
     }
     return (
         <View>
@@ -71,7 +74,7 @@ const CommonTextInput = (props) => {
                     <Text style={styles.forgotStyle}>Forgot Password ?</Text>
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity style={styles.buttonStyle} onPress={() => props.navigation.navigate('DrawerScreen')} >
+            <TouchableOpacity style={styles.buttonStyle} onPress={() => loginPress()} >
                 <Text style={styles.textStyle}>Sign In</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonStyleSignUp} onPress={() => props.navigation.navigate('SignUp')}>

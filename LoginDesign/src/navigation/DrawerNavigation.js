@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Colors from '../config/Colors';
 import Icon from 'react-native-vector-icons/Ionicons'
 import Settings from '../screens/Settings'
+import { DrawerContent } from '../navigation/DrawerContent'
 const HomeDrawer = ({ navigation }) => {
     const HomeStack = createStackNavigator()
     return (
@@ -63,7 +64,7 @@ const SettingDrawer = ({ navigation }) => {
 const DrawerScreen = () => {
     const Drawer = createDrawerNavigator()
     return (
-        <Drawer.Navigator initialRouteName="HomeDrawer">
+        <Drawer.Navigator drawerContent={props => <DrawerContent {...props}/>} >
             <Drawer.Screen name='Home' component={HomeDrawer} />
             <Drawer.Screen name='Settings' component={SettingDrawer} />
         </Drawer.Navigator>

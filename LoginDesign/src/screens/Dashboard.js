@@ -4,7 +4,7 @@ import Colors from '../config/Colors'
 const Dashboard = ({navigation}) => {
     return (
         <View style={styles.mainView}>
-            <Text style={styles.textStyle}>Welcome!</Text>
+            <Text style={styles.textStyle}></Text>
         </View>
     )
 }
