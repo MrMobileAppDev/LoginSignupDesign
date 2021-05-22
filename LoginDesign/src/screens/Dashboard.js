@@ -1,13 +1,10 @@
 import React from 'react'
 import { View, StyleSheet, Text } from 'react-native'
-import LoginChild from '../commonComponents/LoginChild'
 import Colors from '../config/Colors'
-const LoginDesign = ({navigation}) => {
-    
+const Dashboard = ({navigation}) => {
     return (
         <View style={styles.mainView}>
             <Text style={styles.textStyle}>Welcome!</Text>
-            <LoginChild navigation={navigation} />
         </View>
     )
 }
@@ -25,4 +22,4 @@ const styles = StyleSheet.create({
         color:Colors.white
     }
 })
-export default LoginDesign;
+export default Dashboard;

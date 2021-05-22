@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, TextInput } from 'react-native'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import Feather from 'react-native-vector-icons/Feather'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import Colors from '../config/Colors'
 const CommonSignUp = (props) => {
     
     const [eyeOff, setEyeOff] = useState(true)
@@ -131,7 +132,7 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     buttonStyle: {
-        backgroundColor: '#009adc',
+        backgroundColor: Colors.blueButton,
         alignItems: 'center',
         justifyContent: 'center',
         height: 50,
@@ -142,7 +143,7 @@ const styles = StyleSheet.create({
     },
     buttonStyleSignUp: {
         borderWidth:1,
-        borderColor:'#009adc',
+        borderColor:Colors.blueButton,
         alignItems: 'center',
         justifyContent: 'center',
         height: 50,
@@ -159,7 +160,7 @@ const styles = StyleSheet.create({
     textStyleSignUp:{
         fontWeight:'600',
         fontSize:20,
-        color:'#009adc'
+        color:Colors.blueButton
     }
 })
 export default CommonSignUp

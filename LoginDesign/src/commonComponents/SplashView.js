@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { View, StyleSheet, Animated, Text,TouchableOpacity } from 'react-native'
+import Colors from '../config/Colors'
 const SplashView = ({navigation}) => {
     const [animatedValue, setAnimatedValue] = useState(new Animated.Value(600))
     useEffect(() => {
@@ -35,7 +36,7 @@ const SplashView = ({navigation}) => {
 }
 const styles = StyleSheet.create({
     mainView: {
-        backgroundColor: '#ffff',
+        backgroundColor: Colors.white,
         borderRadius: 30,
         width: '100%',
         flex: 0.6,

@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, TextInput } from 'react-native'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import Feather from 'react-native-vector-icons/Feather'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import Colors from '../config/Colors'
 const CommonTextInput = (props) => {
 
     const [eyeOff, setEyeOff] = useState(true)
@@ -70,7 +71,7 @@ const CommonTextInput = (props) => {
                     <Text style={styles.forgotStyle}>Forgot Password ?</Text>
                 </TouchableOpacity>
             </View>
-            <TouchableOpacity style={styles.buttonStyle} >
+            <TouchableOpacity style={styles.buttonStyle} onPress={() => props.navigation.navigate('DrawerScreen')} >
                 <Text style={styles.textStyle}>Sign In</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonStyleSignUp} onPress={() => props.navigation.navigate('SignUp')}>
@@ -106,7 +107,7 @@ const styles = StyleSheet.create({
         marginTop: 10
     },
     buttonStyle: {
-        backgroundColor: '#009adc',
+        backgroundColor: Colors.blueButton,
         alignItems: 'center',
         justifyContent: 'center',
         height: 50,
@@ -117,7 +118,7 @@ const styles = StyleSheet.create({
     },
     buttonStyleSignUp: {
         borderWidth: 1,
-        borderColor: '#009adc',
+        borderColor: Colors.blueButton,
         alignItems: 'center',
         justifyContent: 'center',
         height: 50,
@@ -134,12 +135,12 @@ const styles = StyleSheet.create({
     textStyleSignUp: {
         fontWeight: '600',
         fontSize: 20,
-        color: '#009adc'
+        color: Colors.blueButton
     },
     forgotStyle: {
         marginTop: 10,
         marginLeft: 20,
-        color: '#0063a0'
+        color: Colors.navyBlue
     }
 })
 export default CommonTextInput

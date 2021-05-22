@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, StyleSheet, Text } from 'react-native'
 import SignUpChild from '../commonComponents/SignupChild'
+import Colors from '../config/Colors'
 const SignUp = ({navigation}) => {
     return (
         <View style={styles.mainView}>
@@ -12,7 +13,7 @@ const SignUp = ({navigation}) => {
 const styles = StyleSheet.create({
     mainView: {
         flex: 1,
-        backgroundColor: '#0063a0',
+        backgroundColor: Colors.navyBlue,
         justifyContent:'flex-end',
     },
     textStyle:{
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
         fontSize:30,
         marginBottom:30,
         marginLeft:20,
-        color:'#ffff'
+        color:Colors.white
     }
 })
 export default SignUp;

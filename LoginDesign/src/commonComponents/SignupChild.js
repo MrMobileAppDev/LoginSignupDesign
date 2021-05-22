@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { View, StyleSheet, Animated, Text } from 'react-native'
+import Colors from '../config/Colors'
 import CommonSignup from './CommonSignUp'
 const SignupChild = ({navigation}) => {
     const [animatedValue, setAnimatedValue] = useState(new Animated.Value(600))
@@ -30,7 +31,7 @@ const SignupChild = ({navigation}) => {
 }
 const styles = StyleSheet.create({
     mainView: {
-        backgroundColor: '#ffff',
+        backgroundColor: Colors.white,
         borderRadius: 30,
         width: '100%',
         flex: 0.7,
